@@ -2,7 +2,10 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 export const GET = async (req: Request) => {
   try {
-    const param = req.body.azert;
+    const param = req.body;
+    if (!param) {
+      throw new Error("param is required");
+    }
     console.log("req = ", req);
     return new Response("Hello World", { status: 200 });
   } catch (e) {
