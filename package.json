@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
+    "dev": "cross-env NODE_OPTIONS='-r @newrelic/next' next",
     "build": "next build",
-    "dev": "next dev",
-    "start": "next start"
+    "start": "cross-env NODE_OPTIONS='-r @newrelic/next' next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "latest",
@@ -12,5 +13,8 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
