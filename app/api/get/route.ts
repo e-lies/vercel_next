@@ -1,10 +1,11 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export const GET = async (req: Request) => {
   try {
     console.log("req = ", req);
-    res.status(200).json({ message: "Hello, world!" });
+    return new Response("Hello World", { status: 200 });
   } catch (e) {
-    res.status(500).json({ message: e.message });
+    console.error(e);
+    return new Response(e.message, { status: 500 });
   }
-}
+};

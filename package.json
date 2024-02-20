@@ -1,12 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS='-r @newrelic/next' next",
     "build": "next build",
-    "start": "cross-env NODE_OPTIONS='-r @newrelic/next' next start",
-    "lint": "next lint"
+    "dev": "next dev",
+    "start": "next start"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^1.0.10",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -15,6 +15,9 @@
     "node": ">=18"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "@types/node": "20.11.19",
+    "@types/react": "18.2.57",
+    "cross-env": "^7.0.3",
+    "typescript": "5.3.3"
   }
 }
