@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 export const GET = async (req: Request) => {
   try {
+    const param = req.body.azert;
     console.log("req = ", req);
     return new Response("Hello World", { status: 200 });
   } catch (e) {
